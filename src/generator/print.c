@@ -29,6 +29,7 @@ static struct
     make_print_str(BF_PRINT_NO_L2, "no L2 header available in packet data"),
     make_print_str(BF_PRINT_NO_L3, "no L3 header available in packet data"),
     make_print_str(BF_PRINT_NO_IPV4, "L3 header is not IPv4"),
+    make_print_str(BF_PRINT_FUNC_FAILED, "call to a BPF helper or kfunc failed"),
 };
 
 static int _bf_fd;

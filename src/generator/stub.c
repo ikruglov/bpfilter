@@ -65,6 +65,9 @@ static int _stub_make_ctx_dynptr(struct bf_program *program,
         _cleanup_bf_jmpctx_ struct bf_jmpctx _ =
             bf_jmpctx_get(program, BPF_JMP_IMM(BPF_JEQ, BF_REG_2, 0, 0));
 
+        if (bf_opts_debug())
+            EMIT_PRINT(program, BF_PRINT_FUNC_FAILED);
+
         EMIT(program,
              BPF_MOV64_IMM(BF_REG_RET, program->runtime.ops->get_verdict(
                                            BF_VERDICT_ACCEPT)));

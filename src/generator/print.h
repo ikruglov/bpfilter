@@ -111,6 +111,7 @@ enum bf_print_msg
     BF_PRINT_NO_L2,
     BF_PRINT_NO_L3,
     BF_PRINT_NO_IPV4,
+    BF_PRINT_FUNC_FAILED,
     _BF_PRINT_MAX,
 };
 
